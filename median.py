@@ -24,3 +24,12 @@ def median(A, B):
 
             if (m + n) % 2 == 1:
                 return max_of_left
+
+            if i == m:
+                min_of_right = B[j]
+            elif j == n:
+                min_of_right = A[i]
+            else:
+                min_of_right = min(A[i], B[j])
+
+            return (max_of_left + min_of_right) / 2.0
